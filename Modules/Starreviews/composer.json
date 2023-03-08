@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/starreviews",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Starreviews\\Providers\\StarreviewsServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Starreviews\\": ""
+        }
+    }
+}

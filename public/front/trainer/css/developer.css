@@ -1,0 +1,57 @@
+.profile.upload-input .upload-input-img{
+    border-radius: 0;
+    border: 1px dashed #d2d2d3;
+
+    height: 186px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0;
+}
+.profile.upload-input #photo-input {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.profile.upload-input #photo-edit {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 30px;
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+}
+
+
+.profile.upload-input .edit-img {
+    position: relative;
+}
+
+.profile.upload-input .edit-img img {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.profile.upload-input .edit-img .edit-link {
+    background-image: url(../images/edit-icon-info.png);
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #e8ebf0;
+    transition: all .5s;
+    font-size: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 120px;
+    top: 5px;
+    z-index: 1;
+}

@@ -1,0 +1,288 @@
+Add candidate:
+1. Recruiter--Mandatory inputs tax(w2 with benefits)
+2. Recruiter--Mandatory inputs tax(w2 without benefits)
+3. Recruiter--Mandatory inputs tax(1099)
+4. Recruiter--All inputs tax c to c (Contractor), Source-Referral(Referral info), H1b (Immigration tab), BG and Drug
+5. Rmt to ems move
+
+Inactive Employee:
+4. Edit and add project details
+5. Recruiter--Rehire
+6. RMT--Rehire
+
+---------------------------------------------------------------
+Mar 18 (Thu):
+
+Alex martin--Mandatory with benefits
+
+Alex peter---Mandatory without benefits
+
+Alex Paul----Mandatory with 1099
+
+Alex marry---All fields with c to c, referral, H1B and BG & drug
+
+Alex perry---From RMT
+-------------------------------------------------------------------
+
+Mar 19 (Fri):
+
+JOHNSON ANTHONY---Mandatory with benefits
+
+JOHNSON CODY------Mandatory without benefits
+
+JOHNSON JOHN------Mandatory with 1099
+
+JOHNSON SMITH-----All fields with c to c, referral, H1B and BG & drug
+
+JOHNSON JACK------From RMT
+------------------------------------------------------------------------
+
+Mar 25 (Thu):
+
+WILLIAMS EARLIS---Mandatory with benefits
+
+WILLIAMS SHARIF---Mandatory without benefits
+ 
+WILLIAMS MARK-----Mandatory with 1099
+
+WILLIAMS JAVAN----All fields with c to c, referral, H1B and BG & drug
+
+WILLIAMS JOHN-----From RMT
+
+WILLIAMS PAUL-----BG FORM SUBMITTED
+-------------------------------------------------------------------------
+
+Mar 26 (Fri):
+
+SMITH LARRY-----Mandatory with benefits
+
+SMITH MARIO-----Mandatory without benefits
+
+SMITH TROY------Mandatory with 1099
+
+SMITH JOHN------All fields with c to c, referral, H1B and BG & drug
+
+SMITH DANIEL----From RMT
+--------------------------------------------------------------------------
+
+Mar 29 (Mon):
+
+
+HARRIS EARNEST----Mandatory with benefits
+
+HARRIS JAMES------Mandatory without benefits
+
+HARRIS DUSTIN-----Mandatory with 1099
+
+HARRIS MICHEAL----All fields with c to c, referral, H1B and BG & drug
+
+HARRIS TERRY------From RMT
+----------------------------------------------------------------------------
+
+Mar 30 (Tue):
+
+JONES JAMES------Mandatory with benefits
+
+JONES EARNEST----Mandatory without benefits
+
+JONES MICHEAL----Mandatory with 1099
+
+JONES DUSTIN-----All fields with c to c, referral, H1B and BG & drug
+
+JONES TERRY------From RMT
+-----------------------------------------------------------------------------
+
+Apr 01 (Thu):
+
+IRIS WATSON----- Mandatory with benefits
+
+INA MORAN------- Corp to Corp
+
+HIROKO POTTER----Mandatory with 1099
+
+MUSA MALIK-------Mandatory without benefits (RMT to EMS)
+
+CALISTA WISE---  Mandatory with benefits
+
+------------------------------------------------------------------------------
+
+Apr 02 (Fri):
+
+CANNON MICHAEL--Mandatory with benefits
+
+CANNON JAMES----Mandatory without benefits
+
+CAROL SMITH---- Mandatory with 1099
+
+CANNON DEONTA---All fields with c to c, referral, H1B and BG & drug
+ 
+CANNON TROY-----From RMT
+------------------------------------------------------------------------------
+
+Apr 03 (Sat):
+
+HEDY GREENE-----W2 with benefits
+
+HEDY PARK-------W2 without benefits
+
+HEDY GLEN-------1099
+
+HEDY JUKE-------Corp to Corp
+
+JAMES CAMERON-- RMT to EMS
+------------------------------------------------------------------------------
+
+Apr 05 (Mon):
+
+MIRACLE C--------W2 With Benefits
+
+MIRACLE JOSEPH---W2 Without benefits
+
+MIRACLE THOMAS---1099
+
+MIRACLE lORRIEL--Corp to corp
+
+MIRACLE JOHN-----RMt to EMS
+------------------------------------------------------------------------------
+
+Apr 07 (Wed):
+
+MERLIN JACK------W2 with benefits
+
+MERLIN lORRIEL---W2 without
+
+MERLIN MERY------1099
+
+MERLIN MARO------Corp to Corp
+
+MERLIN BRUSTI----RMt to EMS
+------------------------------------------------------------------------------
+
+Apr 08 (Thu):
+
+LAWSON MARIO-----W2 with benefits
+
+LAWSON RAY-------W2 Without benefits
+
+LAWSON BRIAN-----Mandatory with 1099
+
+LAWSON JAIME-----Corp to corp, All fields with c to c, referral, H1B and BG & drug
+
+LAWSON DANIEL----RMt to EMS
+------------------------------------------------------------------------------
+
+Apr 09 (Fri):
+
+BRUSTI JAMES-----W2 with benefits
+
+BRUSTI AGNES-----W2 wihout benefits
+
+BRUSTI GEORGE----1099
+
+BRUSTI MALIK-----Corp to Corp
+
+BRUSTI CAMERON---RMT to EMS
+------------------------------------------------------------------------------
+
+Apr 12: (Mon)
+
+DAVID PAUL------ W2 with benefits
+
+PETER PAUL-------W2 without benefits
+
+JOHN PAUL--------1099
+
+MERLIN PAUL------Corp to Corp
+------------------------------------------------------------------------------
+
+Apr 15: (Thu)
+
+JAMES SMITH-----W2 with benefits
+
+JAMES PARK------W2 wihout benefits
+
+JAMES PARKER----1099
+
+JAMES PETER-----Corp to Corp
+
+JAMES JAMES-----RMT to EMS
+------------------------------------------------------------------------------
+
+Apr 16: (Fri)
+
+CAROL SMITH---- W2 with benefis
+
+CAROL PARK------W2 without benefits
+
+CAROL PARKER----1099
+
+CAROL PETER-----Corp to Corp
+
+CAROL CAROL-----RMT to EMS
+------------------------------------------------------------------------------
+
+Apr 19: (Mon)
+
+DAVID SMITH-----W2 with benefis
+
+DAVID PETER-----w2 without benefits
+
+DAVID PARKER----1099
+
+DAVID DAVID-----Corp to Corp
+
+DAVID PAUL------RMT to EMS
+------------------------------------------------------------------------------
+
+Apr 20: (Tue)
+
+REEGAN MARY-----W2 with benefits
+
+REEGAN AGNES----W2 wihout benefits
+
+REEGAN JAMES----1099
+
+REEGAN REEGAN---Corp to corp
+
+REEGAN CAMERON--RMT to EMS
+------------------------------------------------------------------------------
+
+May 12: (Wed)
+
+STUART KENNEDY---- W2 with benefits
+
+JOHN KKENNEDY------w2 without benefits
+
+WRICK KENNED-------1099
+
+BRUCE KENNEDY------Corp to corp
+
+GEORGE KENNEDY-----RMT to EMS
+------------------------------------------------------------------------------
+
+Background Check Report--1
+
+Confidentiality and Non Solicitation Form--2
+
+Direct Deposit Authorization Form--3 (Slow)
+
+Drug and Alcohol Policy--4
+
+Sexual and Unlawful Harassment Policy--5
+
+Offer Letter--6
+
+Employment Agreement--7 (Slow)
+
+I-9 Form--8
+
+Pay Table--9 (Slow)
+
+Timesheet Template--10 (Slow)
+
+W-4 Form--11 (Slow)
+
+Resume----12 
+
+Employee Handbook----13 (Slow)
+

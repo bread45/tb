@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #f5f8fa; color: #74787E; height: 100%; hyphens: auto; line-height: 1.4; margin: 0; -moz-hyphens: auto; -ms-word-break: break-all; width: 100% !important; -webkit-hyphens: auto; -webkit-text-size-adjust: none; word-break: break-word;">
+    <style>
+        @media only screen and (max-width: 600px) {
+            .inner-body {
+                width: 100% !important;
+            }
+
+            .footer {
+                width: 100% !important;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+            }
+        }
+    </style>
+    <table class="wrapper" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; background-color: #f5f8fa; margin: 0; padding: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+        <tr>
+            <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                <table class="content" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 0; padding: 0; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+                    <tr>
+                        <td class="header" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 25px 0; text-align: center;  background-color:#438078; color: #232020;">
+                            <a href="{{ env('FRONT_URL', 'http://192.249.121.94/~team2/eventmenow/#/')}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size: 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
+                                <img src="{{ asset('sitebucket/other/logo.svg') }}" alt="img" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border: none; max-width: 150px;">
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Email Body -->
+                    <tr>
+                        <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
+                            <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">
+                                Hello {{$user['first_name'] .' '. $user['last_name']}},
+                            </h1>
+                            <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
+                                <h4>Thank you for creating a profile.</h4>
+                                Your registered email-id is {{$user['email']}},
+                                <br> Please click on the below link to verify your email account
+                            </p>
+                            <table class="action" align="center" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 30px auto; padding: 0; text-align: center; width: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+                                <tr>
+                                    <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                            <tr>
+                                                <td align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                    <table border="0" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                        <tr>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                                <a href="{{ env('FRONT_URL')}}user/verify/{{$user->verifyUser->token}}" class="button button-blue" target="_blank" style="
+                                                                            font-family: Avenir, Helvetica, sans-serif;
+                                                                            -webkit-text-size-adjust: none; 
+                                                                            padding: 10px 20px;
+                                                                            font-size: 16px;
+                                                                            font-weight: 400;
+                                                                            line-height: normal;
+                                                                            color: #fff;
+                                                                            border-radius: 4px;
+                                                                            text-align: center;
+                                                                            border: 2px solid;
+                                                                            border-image-source: linear-gradient(180deg, rgba(57, 111, 123, 1), rgba(84, 174, 123, 1));
+                                                                            border-image-slice: 1;
+                                                                            background: rgb(57, 111, 123);
+                                                                            background: linear-gradient(to bottom, rgba(57, 111, 123, 1) 0%, rgba(84, 174, 123, 1) 100%);
+                                                                            border: none;
+                                                                            text-decoration: none;
+                                                                            ">
+                                                                    Verify Email
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">
+                                Regards,<br>The Event Me Now
+                            </p>
+                            <table class="subcopy" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-top: 1px solid #EDEFF2; margin-top: 25px; padding-top: 25px;">
+                                <tr>
+                                    <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">If you having trouble.
+                                            into your web browser:
+                                            <a href="{{ env('FRONT_URL', 'http://192.249.121.94/~team2/eventmenow/#/')}}user/verify/{{$user->verifyUser->token}}" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3869D4;">
+                                                {{ env('FRONT_URL', 'http://192.249.121.94/~team2/eventmenow/#/')}}user/verify/{{$user->verifyUser->token}}
+                                            </a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style=" background-color:#438078; color: #232020;">
+                        <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                            <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 0 auto; padding: 0; text-align: center; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;">
+                                <tr>
+                                    <td class="content-cell" align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
+                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #AEAEAE; font-size: 12px; text-align: center;">© {{date('Y')}} Event Me Now - Event Me Now. All rights reserved.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

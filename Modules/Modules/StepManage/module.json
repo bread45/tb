@@ -1,0 +1,14 @@
+{
+    "name": "StepManage",
+    "alias": "stepmanage",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\StepManage\\Providers\\StepManageServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

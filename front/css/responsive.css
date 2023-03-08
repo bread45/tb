@@ -1,0 +1,1068 @@
+@media screen and (min-width:576px) {
+    .expert-guidance-section .expert-guidance-slider .slider-counter {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .expert-guidance-section .expert-guidance-slider .slider-counter {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .expert-guidance-section .expert-guidance-slider .slider-counter {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1200px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slider-counter {
+        max-width: 1200px;
+    }
+
+    .training-services-section div#map {
+        position: fixed !important;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        max-width: 50.333333%;
+    }
+
+    .blogs_list .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+@media screen and (max-width:1599px) {
+    .aboutus-section .about-right .about-content {
+        padding: 0 100px;
+    }
+
+    .aboutus-inner-section .about-right .about-content {
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width:1399px) {
+    .aboutus-section .about-right .about-content .icon {
+        margin-bottom: 15px !important;
+    }
+
+    .aboutus-section .about-right .about-content h5 {
+        margin-bottom: 15px !important;
+    }
+
+    .aboutus-inner-section .about-right .about-content .icon {
+        margin-bottom: 15px !important;
+    }
+
+    .aboutus-inner-section .about-right .about-content h5 {
+        margin-bottom: 15px !important;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .expert-guidance-section {
+        padding-top: 30px;
+    }
+
+    .contact-information-section {
+        padding-bottom: 100px;
+    }
+
+    .contact-information-section .contact-form {
+        margin-top: -240px;
+    }
+
+    .login-register-page {
+        padding: 50px 0;
+    }
+
+    .pagenotfound-section p {
+        margin-bottom: 60px;
+    }
+
+    .pagenotfound-section .pagenotfound-img {
+        margin-bottom: 80px;
+    }
+
+    .pagenotfound-section .pagenotfound-img img {
+        max-width: 80%
+    }
+
+    .calender-section {
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .dasktop_view_map {
+        display: none;
+    }
+
+    .mobile_view_map {
+        display: block !important;
+        margin-bottom: 20px;
+    }
+
+    header.navbar {
+        padding: 15px;
+    }
+
+    .banner-section .banner img {
+        height: 600px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .banner .banner-content h3 {
+        font-size: 42px;
+    }
+
+    .banner .banner-content p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .banner .banner-content .banner-search .input-group .form-control {
+        height: 56px;
+        padding: 0 10px 0px 47px;
+    }
+
+    .banner .banner-content .banner-search .input-group .myinput-placeholder {
+        line-height: 56px;
+        padding: 0 15px;
+    }
+
+    .banner .banner-content .banner-search .input-group.search-group {
+        max-width: 430px;
+    }
+
+    .banner .banner-content .banner-search .input-group.location-group {
+        max-width: 180px;
+    }
+
+    .banner .banner-content .banner-search .btn {
+        min-width: 150px;
+        width: 150px;
+        padding: 0;
+    }
+
+    .banner .banner-content .banner-search .input-group.location-group .form-control.location-box {
+        padding-right: 15px;
+        padding-left: 40px;
+        background-position: 13px center;
+    }
+
+    .banner .banner-content .banner-search .input-group.location-group .myinput-placeholder {
+        padding-left: 40px;
+        font-weight: 700;
+        padding-right: 15px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slick-arrow {
+        margin-right: calc((100% - 990px) / 2);
+    }
+
+    .aboutus-section .about-right .about-content {
+        padding: 0 0 0 60px;
+    }
+
+    .aboutus-inner-section .about-right .about-content {
+        padding: 0 0 0 60px;
+    }
+
+    .aboutus-section .about-right {
+        padding-right: calc((100% - 990px) / 2);
+    }
+
+    .aboutus-inner-section .about-right {
+        padding-right: calc((100% - 990px) / 2);
+    }
+
+    .common-data-table .dataTables_wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .common-data-table .dataTable {
+        min-width: 1100px;
+    }
+
+    common-data-table.messaging-data-table .dataTable {
+        min-width: 100%
+    }
+
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+        top: 25px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide .slide-content {
+        opacity: .9;
+    }
+
+    .map-wrapper {
+        height: 390px !important;
+    }
+
+    #map {
+        display: none;
+    }
+
+    .move_map1 {
+        display: none;
+    }
+
+    .map-wrapper .gm-style-iw.gm-style-iw-c {
+        height: auto;
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    .right-section-wrapper {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .card .trainerservices .trainerservices-status {
+        margin-top: 10px;
+    }
+
+    .trainerservices {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 10px;
+        margin-bottom: 0;
+        flex-flow: column;
+    }
+
+    .card .card-body .location {
+        font-size: 14px;
+    }
+
+    .training-services-section .card .card-body p {
+        min-height: 150px;
+    }
+}
+
+@media(min-width:1024px) and (max-width:1280px) {
+    .tips-section .card .card-body {
+        min-height: 470px;
+    }
+
+
+
+    .featured_providers .card-body {
+        min-height: 270px !important;
+        max-height: none !important;
+        padding-bottom: 0;
+    }
+
+    .card .trainerservices .trainerservices-status {
+        margin-top: 10px;
+    }
+
+    .trainerservices {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 10px;
+        margin-bottom: 0;
+        flex-flow: column;
+    }
+
+    .training-services-section .card .card-body p {
+        min-height: 150px;
+    }
+
+    .card .card-body .location {
+        font-size: 14px;
+    }
+
+    .contact-map-section {
+        margin-top: -20px;
+    }
+
+    .aboutus-inner-section .how-work-about .about-right {
+        padding-left: 0;
+        margin-left: 0;
+        clip-path: none;
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-top: 50px;
+    }
+
+    .aboutus-inner-section .how-work-about .about-right .about-content {
+        padding-left: 0;
+        padding-right: 60px;
+    }
+
+    .contact-info-box .contact-box-inner {
+        padding: 25px 15px;
+    }
+
+    .contact-info-box .list span {
+        font-weight: 600;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    header.navbar .account-link {
+        -ms-flex-order: 1;
+        order: 1;
+        margin-left: auto;
+        margin-right: 40px;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    section.adv_section {
+        padding: 60px 0;
+    }
+
+    section.training-services-section {
+        padding: 40px 35px;
+    }
+
+    .mobile_view_ads {
+        display: none !important;
+    }
+
+
+    .training-services-section .right-section-wrapper {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .contact-map-section {
+        margin-top: -10px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .banner .banner-content h3 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .banner .banner-content .banner-search .input-group .form-control,
+    .banner .banner-content .banner-search .input-group .myinput-placeholder {
+        font-size: 16px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slick-arrow {
+        margin-right: calc((100% - 750px) / 2);
+    }
+
+    .aboutus-section .about-left {
+        width: 100%;
+        margin-top: 0;
+        clip-path: none;
+    }
+
+    .aboutus-section .about-right {
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+        clip-path: none;
+        padding: 60px 15px;
+    }
+
+    .aboutus-section .about-right .about-content {
+        padding: 0;
+    }
+
+    .aboutus-section {
+        padding: 0;
+    }
+
+    .aboutus-inner-section .about-left {
+        width: 100%;
+        margin-top: 0;
+        clip-path: none;
+    }
+
+    .aboutus-inner-section .about-right {
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+        clip-path: none;
+        padding: 60px 15px;
+    }
+
+    .aboutus-inner-section .about-right .about-content {
+        padding: 0;
+    }
+
+    .aboutus-inner-section {
+        padding: 0;
+    }
+
+    .aboutus-inner-section .how-work-about .about-left {
+        clip-path: none;
+        position: static;
+    }
+
+    .aboutus-inner-section .mission-about {
+        padding-top: 0;
+    }
+
+    header.navbar {
+        border-bottom: 0;
+    }
+
+    header.navbar .account-link {
+        -ms-flex-order: 1;
+        order: 1;
+        margin-left: auto;
+        margin-right: 40px;
+    }
+
+    header.navbar .account-link .btn {
+        margin-left: 0;
+    }
+
+    header.navbar .account-link:before {
+        display: none;
+    }
+
+    header.navbar .navbar-collapse {
+        background-color: #fff;
+        margin-top: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        -ms-flex-order: 3;
+        order: 3;
+    }
+
+    header.navbar .navbar-nav .nav-link {
+        color: #0d1622;
+        padding: 15px 20px;
+    }
+
+    header.navbar .navbar-nav .nav-item.register-link .nav-link {
+        margin-left: 0;
+        padding: 15px 20px;
+        background-image: none;
+    }
+
+    header.navbar .navbar-nav .nav-item .nav-link:hover,
+    header.navbar .navbar-nav .nav-item .nav-link:focus,
+    header.navbar .navbar-nav .nav-item.active .nav-link {
+        background-color: #0d1622;
+        color: #fff;
+    }
+
+    .browser-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    header.navbar.navbar-dark .navbar-toggler {
+        border: 0;
+        padding: 0;
+        position: relative;
+        height: 18px;
+        width: 24px;
+        outline: 0;
+        box-shadow: none;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    header.navbar.navbar-dark .navbar-toggler span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all .3s;
+    }
+
+    header.navbar.navbar-dark .navbar-toggler span:nth-child(2),
+    header.navbar.navbar-dark .navbar-toggler span:nth-child(3) {
+        top: 8px;
+    }
+
+    header.navbar.navbar-dark .navbar-toggler span:nth-child(4) {
+        top: 16px;
+    }
+
+    header.navbar.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(1),
+    header.navbar.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(4) {
+        top: 8px;
+        opacity: 0;
+    }
+
+    header.navbar.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    header.navbar.navbar-dark .navbar-toggler[aria-expanded="true"] span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    header.navbar .navbar-nav .nav-link::after {
+        display: none;
+    }
+
+    .inner-banner-section .banner-content h1 {
+        font-size: 40px;
+    }
+
+    .breadcrumb {
+        font-size: 16px;
+    }
+
+    .inner-banner-section .banner-content {
+        padding: 20px 0 60px;
+    }
+
+    .pagination {
+        margin-top: 30px;
+    }
+
+    .contact-information-section .contact-form {
+        margin-top: 30px;
+    }
+
+    .login-register-page .nav-tabs .nav-item {
+        padding: 0 30px;
+    }
+
+    .login-register-page .nav-tabs .nav-link {
+        font-size: 22px;
+        padding: 20px 0;
+    }
+
+    .login-register-page .nav-tabs .nav-item::after {
+        height: 22px;
+        top: 18px;
+    }
+
+    .pagenotfound-section h2 {
+        font-size: 42px;
+    }
+
+    .pagenotfound-section p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .pagenotfound-section .pagenotfound-img {
+        margin-bottom: 60px;
+    }
+
+    .pagenotfound-section {
+        padding-bottom: 70px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide .slide-content {
+        padding: 20px 15px;
+    }
+
+    .trainer-details-section {
+        padding-top: 50px;
+    }
+
+    .trainer-details-section .about-right {
+        padding-bottom: 0;
+    }
+
+    footer .contact-info a {
+        font-size: 12px;
+    }
+
+    .right-section-wrapper .card .card-image {
+        max-width: 295px;
+    }
+
+    .right-section-wrapper .card {
+        max-height: unset;
+    }
+
+    .contact-info-box .list span {
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .contact-info-box .contact-box-inner {
+        padding: 25px 15px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .advertisement_image {
+        background-size: 100% auto;
+    }
+
+    .blogs_list .card-img-top {
+        height: 300px;
+    }
+
+    section.featured-business-section {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .banner img {
+        height: 700px;
+    }
+
+    .banner .banner-content {
+        margin-top: -91px;
+    }
+
+    .banner .banner-content .banner-search {
+        flex-wrap: wrap;
+    }
+
+    .banner .banner-content .banner-search .input-group .form-control,
+    .banner .banner-content .banner-search .input-group .myinput-placeholder {
+        font-size: 14px;
+    }
+
+    .banner .banner-content .banner-search .input-group {
+        min-height: 56px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .banner .banner-content .banner-search .input-group.search-group {
+        border-radius: 5px;
+    }
+
+    .banner .banner-content .banner-search .input-group.location-group {
+        max-width: 100%
+    }
+
+    .banner .banner-content .banner-search .input-group.location-group,
+    .banner .banner-content .banner-search .input-group.search-group {
+        max-width: 100%
+    }
+
+    .banner .banner-content .banner-search .btn {
+        border-radius: 5px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slick-arrow {
+        margin-right: calc((100% - 570px) / 2);
+    }
+
+    .banner .banner-content h3 {
+        font-size: 23px;
+        line-height: 40px;
+    }
+
+    .banner .banner-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .expert-guidance-section {
+        padding-top: 0;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slick-arrow {
+        bottom: -8px;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slick-list {
+        margin-bottom: 30px;
+    }
+
+    .featured-business-section .featured-business-slider {
+        margin: 0 -15px;
+    }
+
+    .featured-business-slider .slick-list {
+        padding: 60px 0 25px;
+    }
+
+    .featured-business-section .featured-business-slider .slick-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .banner {}
+
+    .card .card-image {
+        -webkit-clip-path: ellipse(130% 60% at 50% 40%);
+        clip-path: ellipse(130% 60% at 50% 40%);
+    }
+
+    footer {
+        /* -webkit-clip-path: ellipse(170% 100% at 50% 100%); */
+        /* clip-path: ellipse(170% 100% at 50% 100%); */
+        padding: 30px 0 0;
+    }
+
+    footer .footer-copyright {
+        margin-top: 40px;
+    }
+
+    .inner-banner-section {
+        -webkit-clip-path: ellipse(130% 60% at 50% 40%);
+        clip-path: ellipse(130% 60% at 50% 40%);
+    }
+
+    .newsletter-form {
+        flex-wrap: wrap;
+    }
+
+    .newsletter-form .input-group {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .newsletter-form .input-group .form-control {
+        border-radius: 5px;
+    }
+
+    .newsletter-form .btn {
+        border-radius: 5px;
+    }
+
+    .login-register-page {
+        padding: 80px 0;
+    }
+
+    .pagenotfound-section h2 {
+        font-size: 36px;
+    }
+
+    .pagenotfound-section p {
+        margin-bottom: 30px;
+    }
+
+    .pagenotfound-section .pagenotfound-img img {
+        max-width: 100%
+    }
+
+    .pagenotfound-section .pagenotfound-img {
+        margin-bottom: 50px;
+    }
+
+    .common-data-table .dataTable {
+        min-width: 100%
+    }
+
+    .common-data-table table.dataTable tbody td.child {
+        border: 1px solid #eaeaea;
+        border-top: 0;
+    }
+
+    .contact-information-section {
+        padding-bottom: 60px;
+    }
+
+    .contact-map-section img {
+        min-height: 260px;
+        object-fit: cover;
+    }
+
+    .fc-button-group button,
+    .fc-today-button,
+    .fc-event .fc-content .fc-title,
+    .fc-day-grid-event .fc-time {
+        font-size: 10px;
+    }
+
+    .fc-toolbar h2 {
+        font-size: 16px;
+    }
+
+    .fc-day-header span,
+    span.fc-day-number {
+        font-size: 12px;
+    }
+
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+        top: 17px;
+    }
+
+    .common-data-table.messaging-data-table .dtr-details {
+        width: 100%;
+        white-space: normal;
+    }
+
+    .private-message-board .card-header {
+        padding: 20px;
+    }
+
+    .private-message-board .register-block .register-block-inner {
+        padding: 5px;
+    }
+
+    .messages-wrap ul li img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .message-input .wrap input {
+        font-size: 14px;
+        height: 40px;
+        padding: 5px 10px;
+    }
+
+    .message-input .wrap button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-icon {
+        font-size: 18px;
+    }
+
+    .training-services-section .service-filters .btn {
+        margin-bottom: 20px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide .slide-content h4 {
+        font-size: 15px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide .slide-content p {
+        line-height: normal;
+    }
+
+    .common-data-table .dataTables_info {
+        padding-bottom: 25px;
+    }
+
+    .training-services-section .card-image {
+        padding-top: 50%;
+        background-position: top;
+    }
+
+    .right-section-wrapper .card {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .right-section-wrapper .card .card-image {
+        max-width: 100%
+    }
+
+    section.training-services-section {
+        padding: 30px 0 100px 0;
+    }
+
+    .map-wrapper .card-image {
+        padding-top: 0;
+    }
+
+    .training-services-section .right-section-wrapper {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    header.navbar .navbar-brand img {
+        max-width: 85px;
+    }
+
+    header.navbar .account-link {
+        margin-right: 20px;
+    }
+
+    header.navbar .account-link .btn {
+        padding-left: 22px;
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 20px;
+        background-size: 12px auto;
+    }
+
+    header.navbar .account-link .dropdown-toggle::after {
+        margin-left: 5px;
+        border-top: 7px solid;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slick-arrow {
+        margin-right: 15px;
+    }
+
+    .featured-business-section .featured-business-slider {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .featured-business-section .featured-business-slider .slide {
+        padding: 0 15px;
+    }
+
+    .featured-business-section .featured-business-slider .slick-arrow {
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .featured-business-section .featured-business-slider .slick-arrow.slick-next {
+        right: -50px;
+    }
+
+    .featured-business-section .featured-business-slider .slick-arrow.slick-prev {
+        left: -50px;
+    }
+
+    .inner-banner-section .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .breadcrumb {
+        font-size: 14px;
+    }
+
+    .contact-information-section .contact-detail .contact-call a {
+        margin-bottom: 20px;
+    }
+
+    .contact-information-section .contact-form {
+        padding: 25px;
+    }
+
+    .login-register-page .register-block .register-block-inner {
+        padding: 25px;
+    }
+
+    .login-register-page .form .remember-password.custom-checkbox {
+        width: 100%
+    }
+
+    .login-register-page .nav-tabs {
+        padding: 0 0 0 25px;
+    }
+
+    .login-register-page .nav-tabs .nav-item {
+        padding: 0 25px;
+    }
+
+    .login-register-page .nav-tabs .nav-link {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+
+    .common-data-table .dataTables_paginate .paginate_button.previous,
+    .common-data-table .dataTables_paginate .paginate_button.next {
+        padding: 0 15px;
+    }
+
+    .fc-button-group button,
+    .fc-today-button {
+        padding: 4px 3px;
+    }
+
+    .fc-next-button,
+    .fc-prev-button {
+        padding: 4px 0 !important;
+    }
+
+    .fc-toolbar h2 {
+        font-size: 14px;
+    }
+
+    .fc-today-button {
+        margin-left: 4px !important;
+    }
+
+    .top-title-rating .rating {
+        margin-bottom: 6px;
+    }
+
+    .top-title-rating {
+        display: block;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .expert-guidance-section .expert-guidance-slider .slide .slide-content {
+        padding: 10px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide:hover .slide-content h4 {
+        font-size: 15px;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide:hover .slide-content p {
+        display: none;
+    }
+
+    .expert-guidance-section .expert-guidance-slider .slide .slide-content .location {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:355px) {
+
+    .fc-button-group button,
+    .fc-today-button {
+        padding: 2px 1px;
+    }
+
+    .fc-next-button,
+    .fc-prev-button {
+        padding: 2px 0 !important;
+    }
+
+    .contact-information-section .contact-detail .contact-call a {
+        word-break: break-all;
+        font-size: 14px;
+        padding-left: 45px;
+    }
+
+    .fc-toolbar.fc-header-toolbar .fc-center h2 {
+        font-size: 18px;
+    }
+
+    .fc-toolbar.fc-header-toolbar button.fc-today-button {
+        font-size: 12px;
+    }
+
+    .map-wrapper .gm-style-iw.gm-style-iw-c {
+        height: 160px;
+    }
+
+    .map-wrapper .gm-style-iw.gm-style-iw-c {
+        max-width: 260px !important;
+    }
+}

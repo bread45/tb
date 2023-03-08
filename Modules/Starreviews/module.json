@@ -1,0 +1,14 @@
+{
+    "name": "Starreviews",
+    "alias": "starreviews",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Starreviews\\Providers\\StarreviewsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

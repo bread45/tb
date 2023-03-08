@@ -1,0 +1,28 @@
+@media screen and (max-width: 991px){
+    .container,
+    .container-fluid {padding-left: 15px;padding-right: 15px;}
+    .page-title h1{width: 100%;}
+    .sidebar {position: fixed;height: 100%;overflow: auto;z-index: 9;flex-wrap: nowrap;top: 0;left: -250px;transition: all .5s;padding: 30px 0 0;}
+    .sidebar.toggled {left: 0;}
+    body.menu-open #wrapper{margin-left: 250px;}
+}
+
+@media screen and (max-width: 767px){
+    body.menu-open #wrapper{left: 250px;margin-left: 0;}
+
+    .private-message-board .register-block .register-block-inner {padding: 5px;}
+    .messages-wrap ul li img {width: 40px;}
+    .message-input .wrap input {font-size: 14px;height: 40px;padding: 5px 10px;}
+    .message-input .wrap button {width: 40px;height: 40px;}
+}
+
+@media screen and (max-width: 575px){
+    .fc-button-group button, .fc-today-button, .fc-event .fc-content .fc-title, .fc-day-grid-event .fc-time {font-size: 10px;}
+    .fc-toolbar h2 {font-size: 16px;}
+    .fc-day-header span, span.fc-day-number {font-size: 12px;}
+}
+
+@media screen and (max-width: 399px){
+    .fc-button-group button, .fc-today-button {padding: 2px 1px;}
+    .fc-next-button, .fc-prev-button {padding: 2px 0 !important;}
+}

@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/advertisementdetails",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Advertisementdetails\\Providers\\AdvertisementdetailsServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Advertisementdetails\\": ""
+        }
+    }
+}

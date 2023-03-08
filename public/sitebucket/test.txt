@@ -1,0 +1,31 @@
+
+
+----------------------   Notify URL call...   ----------------------
+{"m_payment_id":"2","pf_payment_id":"976405","payment_status":"COMPLETE","item_name":"Basic","item_description":"This is Basic plan 1 months","amount_gross":"10.00","amount_fee":"-2.75","amount_net":"7.25","custom_str1":"2","custom_str2":null,"custom_str3":null,"custom_str4":null,"custom_str5":null,"custom_int1":"3","custom_int2":null,"custom_int3":null,"custom_int4":null,"custom_int5":null,"name_first":"First","name_last":"Suppiler","email_address":"test@nomail.com","merchant_id":"10015984","token":"c9471a87-3ece-7e81-a89c-423d297eb1bd","billing_date":"2020-01-31","signature":"c5ab4827bad42f5dd5d7200ece2f3752"}
+COMPLETE
+Create Plan ...
+
+----------------------   Notify URL call...   ----------------------
+{"m_payment_id":"2","pf_payment_id":"976407","payment_status":"COMPLETE","item_name":"Standard","item_description":"This is Standard plan 2 months","amount_gross":"89.00","amount_fee":"-6.29","amount_net":"82.71","custom_str1":"2","custom_str2":null,"custom_str3":null,"custom_str4":null,"custom_str5":null,"custom_int1":"2","custom_int2":null,"custom_int3":null,"custom_int4":null,"custom_int5":null,"name_first":"First","name_last":"Suppiler","email_address":"test@nomail.com","merchant_id":"10015984","token":"55b6ae9c-03c0-35ac-b0b1-71f2f921dce3","billing_date":"2020-01-31","signature":"a30668b10fcd2322bf193b83b9b423c8"}
+COMPLETE
+Create Plan ...
+
+----------------------   Notify URL call...   ----------------------
+{"m_payment_id":"2","pf_payment_id":"976410","payment_status":"COMPLETE","item_name":"Basic","item_description":"This is Basic plan 1 months","amount_gross":"10.00","amount_fee":"-2.75","amount_net":"7.25","custom_str1":"2","custom_str2":null,"custom_str3":null,"custom_str4":null,"custom_str5":null,"custom_int1":"3","custom_int2":null,"custom_int3":null,"custom_int4":null,"custom_int5":null,"name_first":"First","name_last":"Suppiler","email_address":"test@nomail.com","merchant_id":"10015984","token":"c0c7e386-887d-7859-5228-2b38d2cdd8c7","billing_date":"2020-01-31","signature":"2b2ce996e16d26aa859a873ad4c550b7"}
+COMPLETE
+Create Plan ...
+
+----------------------   Notify URL call...   ----------------------
+{"m_payment_id":"2","pf_payment_id":"976412","payment_status":"COMPLETE","item_name":"Standard","item_description":"This is Standard plan 2 months","amount_gross":"89.00","amount_fee":"-6.29","amount_net":"82.71","custom_str1":"2","custom_str2":null,"custom_str3":null,"custom_str4":null,"custom_str5":null,"custom_int1":"2","custom_int2":null,"custom_int3":null,"custom_int4":null,"custom_int5":null,"name_first":"First","name_last":"Suppiler","email_address":"test@nomail.com","merchant_id":"10015984","token":"20506a6b-5a02-6b03-a4c1-ee18abecea4b","billing_date":"2020-01-31","signature":"6ed547492a8322a49ffe4cd2fd8b582c"}
+COMPLETE
+Create Plan ...
+
+----------------------   Notify URL call...   ----------------------
+{"m_payment_id":"2","pf_payment_id":"976413","payment_status":"COMPLETE","item_name":"Basic","item_description":"This is Basic plan 1 months","amount_gross":"10.00","amount_fee":"-2.75","amount_net":"7.25","custom_str1":"2","custom_str2":null,"custom_str3":null,"custom_str4":null,"custom_str5":null,"custom_int1":"3","custom_int2":null,"custom_int3":null,"custom_int4":null,"custom_int5":null,"name_first":"First","name_last":"Suppiler","email_address":"test@nomail.com","merchant_id":"10015984","token":"b4da92b0-1ad6-feda-1f57-2a671e7fd2bb","billing_date":"2020-01-31","signature":"254747abeadf83ccd555e4f06a469be5"}
+COMPLETE
+Create Plan ...
+
+----------------------   Notify URL call...   ----------------------
+{"m_payment_id":"2","pf_payment_id":"976414","payment_status":"COMPLETE","item_name":"Standard","item_description":"This is Standard plan 2 months","amount_gross":"89.00","amount_fee":"-6.29","amount_net":"82.71","custom_str1":"2","custom_str2":null,"custom_str3":null,"custom_str4":null,"custom_str5":null,"custom_int1":"2","custom_int2":null,"custom_int3":null,"custom_int4":null,"custom_int5":null,"name_first":"First","name_last":"Suppiler","email_address":"test@nomail.com","merchant_id":"10015984","token":"8125749f-67df-79a5-c9dd-66b824b2bd61","billing_date":"2020-01-31","signature":"be2547616f4b7392ad1c181c5d210cda"}
+COMPLETE
+Create Plan ...
