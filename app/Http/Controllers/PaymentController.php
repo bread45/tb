@@ -747,7 +747,7 @@ dd($payment);exit();
                 $dbdata = array();
                 $code = $rerdata['code'];
                 //$code = 'ac_HMNFw2mTi5tfPen14gOxvccGM96QhNQl';
-                $client_secret = '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';
+                $client_secret = env('STRIPE_SECRET_KEY');
                 Stripe\Stripe::setApiKey($client_secret); 
                 //$tokendata = GetToken($url, $client_secret, $code);
                 $tokendata = \Stripe\OAuth::token([
