@@ -437,9 +437,7 @@ button:active {
     var stripe = Stripe('{{ env('STRIPE_PUB_KEY') }}'); 
 @endif
 
-// var stripe = Stripe('{{ env('STRIPE_PUB_KEY') }}'); 
-var stripe = Stripe('pk_live_ygqzqoE0bKgVWtbk7MLQW5eW00hFXQQGMw');
-    //console.log('{{ env('STRIPE_PUB_KEY') }}');
+var stripe = Stripe('{{ env('STRIPE_PUB_KEY') }}');
 var elements = stripe.elements();
 
 var style = {

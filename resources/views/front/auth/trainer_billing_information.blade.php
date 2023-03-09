@@ -47,7 +47,7 @@
                             </div>
                       <form method="POST" action="{{route('front.register')}}" class="require-validation mb-lg-5"
                                                                  data-cc-on-file="false"
-                                                                data-stripe-publishable-key="pk_live_ygqzqoE0bKgVWtbk7MLQW5eW00hFXQQGMw"
+                                                                data-stripe-publishable-key="{{ env('STRIPE_PUB_KEY') }}"
                                                                 id="payment-form" >
                                         @csrf
                                         @if (app('request')->input('ref'))
@@ -399,7 +399,7 @@ $('#subscription_plan').on('change', function() {
     var stripe = Stripe('{{ env('STRIPE_PUB_KEY') }}'); 
 @endif
 
-var stripe = Stripe('pk_live_ygqzqoE0bKgVWtbk7MLQW5eW00hFXQQGMw');
+var stripe = Stripe('{{ env('STRIPE_PUB_KEY') }}');
 var elements = stripe.elements();
 
 var style = {

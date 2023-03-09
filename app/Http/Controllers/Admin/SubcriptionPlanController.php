@@ -115,7 +115,7 @@ class SubcriptionPlanController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withInput($request->all())->withErrors($validator->errors());
         } else {
-            \Stripe\Stripe::setApiKey('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');
+            \Stripe\Stripe::setApiKey('{{ env('STRIPE_SECRET_KEY') }}');
             if (isset($input['subcription_plan_id'])) {
                 $subcriptionPlan = SubscriptionPlan::find($request->subcription_plan_id);
                 try {

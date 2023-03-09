@@ -122,7 +122,7 @@ class RegisterController extends Controller
     function createnewproviderpaymentintent(Request $request) {
             $data = $request->all();
             $price = $data['planPrice'];
-            $stripe = Stripe\Stripe::setApiKey('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'); 
+            $stripe = Stripe\Stripe::setApiKey('{{ env('STRIPE_SECRET_KEY') }}'); 
 
             $response = array();
 
@@ -236,7 +236,7 @@ class RegisterController extends Controller
                 
                 if($requestData['user_role'] == "trainer"){
                     
-                    Stripe\Stripe::setApiKey('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');
+                    Stripe\Stripe::setApiKey('{{ env('STRIPE_SECRET_KEY') }}');
                     if($requestData['free_trial'] == 0){
 
                         $startDate = $requestData['start_date'];
