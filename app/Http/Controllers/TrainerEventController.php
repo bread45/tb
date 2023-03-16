@@ -24,10 +24,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use App\StripeAccounts;
 use DateTime;
-require 'mail/PHPMailer/Exception.php';
-require 'mail/PHPMailer/PHPMailer.php';
-require 'mail/PHPMailer/SMTP.php';
-require 'mail/vendor/autoload.php';
+include_once(app_path().'/../mail/PHPMailer/Exception.php');
+include_once(app_path().'/../mail/PHPMailer/PHPMailer.php');
+include_once(app_path().'/../mail/PHPMailer/SMTP.php');
+include_once(app_path().'/../mail/vendor/autoload.php');
 
 class TrainerEventController extends Controller
 {
@@ -1090,8 +1090,7 @@ public function ChangeRsvp(Request $request) {
 
     // Mail Notification while athelete comments the event        
 
-    // $trainer_email = $request->provider_email;
-    $trainer_email = "gowthamank@themajesticpeople.com";
+    $trainer_email = $request->provider_email;
     $comment_mail = new PHPMailer;
     $comment_mail->IsSMTP();
     $comment_mail->SMTPAuth = true;
@@ -1181,8 +1180,7 @@ public function ChangeRsvp(Request $request) {
 
     // Mail Notification while athelete comments the event        
 
-    // $trainer_email = $request->provider_email;
-    $trainer_email = "gowthamank@themajesticpeople.com";
+    $trainer_email = $request->provider_email;
     $comment_mail = new PHPMailer;
     $comment_mail->IsSMTP();
     $comment_mail->SMTPAuth = true;

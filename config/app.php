@@ -46,8 +46,8 @@ return [
       | your application so that it is used when running Artisan tasks.
       |
      */
-    'url' => env('APP_URL', 'http://localhost'),
-    'asset' => env('ASSET_URL', null),
+    'url' => env('APP_URL', 'http://localhost/TrainingBlock'),
+    'asset' => env('ASSET_URL', 'http://localhost/TrainingBlock/public/'),
     /*
       |--------------------------------------------------------------------------
       | Application Timezone

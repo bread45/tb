@@ -439,7 +439,8 @@ hr {
 
 .img-fluid {
     max-width: 100%;
-    height: auto
+    height: auto;
+    width: 100%;
 }
 
 .img-thumbnail {
@@ -1097,7 +1098,7 @@ pre code {
     .col-md-3 {
         -ms-flex: 0 0 25%;
         flex: 0 0 25%;
-        max-width: 25%
+        max-width: 19%
     }
     .col-md-4 {
         -ms-flex: 0 0 33.333333%;
@@ -1995,7 +1996,7 @@ pre code {
 }
 
 .form-control:disabled, .form-control[readonly] {
-    background-color: #e9ecef;
+    background-color: #fff;
     opacity: 1
 }
 
@@ -2442,20 +2443,20 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #008080;
+    border-color: #008080
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc
+    background-color: #008080;
+    border-color: #008080
 }
 
 .btn-primary.focus, .btn-primary:focus {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #008080;
+    border-color: #008080;
     box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5)
 }
 
@@ -2467,8 +2468,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf
+    background-color: #008080;
+    border-color: #008080
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
@@ -2477,20 +2478,20 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff;
-    background-color: #6c757d;
+    background-color: #cf5260;
     border-color: #6c757d
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #5a6268;
-    border-color: #545b62
+    background-color: #cf5260;
+    border-color: #cf5260
 }
 
 .btn-secondary.focus, .btn-secondary:focus {
     color: #fff;
-    background-color: #5a6268;
-    border-color: #545b62;
+    background-color: #cf5260;
+    border-color: #cf5260;
     box-shadow: 0 0 0 .2rem rgba(130, 138, 145, .5)
 }
 
@@ -2512,37 +2513,37 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
+    background-color: #ff91a4;
+    border-color: #ff91a4
 }
 
 .btn-success:hover {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34
+    background-color: #ff91a4;
+    border-color: #ff91a4
 }
 
 .btn-success.focus, .btn-success:focus {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-    box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5)
+    background-color: #ff91a4;
+    border-color: #ff91a4;
+    box-shadow: 0 0 0 .2rem rgba(255, 145, 164)
 }
 
 .btn-success.disabled, .btn-success:disabled {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
+    background-color: #ff91a4;
+    border-color: #ff91a4
 }
 
 .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
     color: #fff;
-    background-color: #1e7e34;
-    border-color: #1c7430
+    background-color: #ff91a4;
+    border-color: #ff91a4
 }
 
 .btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5)
+    box-shadow: 0 0 0 .2rem rgba(255, 145, 164)
 }
 
 .btn-info {
@@ -2727,8 +2728,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #008080;
+    border-color: #008080
 }
 
 .btn-outline-primary.focus, .btn-outline-primary:focus {
@@ -2736,14 +2737,14 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-    color: #007bff;
+    color: #008080;
     background-color: transparent
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #008080;
+    border-color: #008080
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
@@ -2877,8 +2878,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-outline-danger:hover {
     color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545
+    background-color: #f790a2;
+    border-color: #f790a2;
 }
 
 .btn-outline-danger.focus, .btn-outline-danger:focus {
@@ -2886,14 +2887,14 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-outline-danger.disabled, .btn-outline-danger:disabled {
-    color: #dc3545;
+    color: #f790a2;
     background-color: transparent
 }
 
 .btn-outline-danger:not(:disabled):not(.disabled).active, .btn-outline-danger:not(:disabled):not(.disabled):active, .show>.btn-outline-danger.dropdown-toggle {
     color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545
+    background-color: #f790a2;
+    border-color: #f790a2
 }
 
 .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-danger.dropdown-toggle:focus {
@@ -4023,6 +4024,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .nav-tabs {
     border-bottom: 1px solid #dee2e6;
     background: #f5f5f5;
+    width: 100%;
     
 }
 
@@ -4896,7 +4898,7 @@ a.badge-secondary.focus, a.badge-secondary:focus {
 
 .badge-success {
     color: #fff;
-    background-color: #28a745
+    background-color: #00ab91;
 }
 
 a.badge-success:focus, a.badge-success:hover {
@@ -5804,7 +5806,9 @@ a.close.disabled {
     position: relative;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1rem
+    height: 400px;
+    overflow-y: scroll;
+    padding: 1rem;
 }
 
 .modal-footer {

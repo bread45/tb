@@ -20,10 +20,10 @@ use PHPMailer\PHPMailer\Exception;
 use DB;
 use Stripe;
 
-require 'mail/PHPMailer/Exception.php';
-require 'mail/PHPMailer/PHPMailer.php';
-require 'mail/PHPMailer/SMTP.php';
-require 'mail/vendor/autoload.php';
+include_once(app_path().'/../mail/PHPMailer/Exception.php');
+include_once(app_path().'/../mail/PHPMailer/PHPMailer.php');
+include_once(app_path().'/../mail/PHPMailer/SMTP.php');
+include_once(app_path().'/../mail/vendor/autoload.php');
 
 class RegisterController extends Controller
 {   
@@ -122,7 +122,7 @@ class RegisterController extends Controller
     function createnewproviderpaymentintent(Request $request) {
             $data = $request->all();
             $price = $data['planPrice'];
-            $stripe = Stripe\Stripe::setApiKey('{{ env('STRIPE_SECRET_KEY') }}'); 
+            $stripe = Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY')); 
 
             $response = array();
 
@@ -236,7 +236,7 @@ class RegisterController extends Controller
                 
                 if($requestData['user_role'] == "trainer"){
                     
-                    Stripe\Stripe::setApiKey('{{ env('STRIPE_SECRET_KEY') }}');
+                    Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
                     if($requestData['free_trial'] == 0){
 
                         $startDate = $requestData['start_date'];

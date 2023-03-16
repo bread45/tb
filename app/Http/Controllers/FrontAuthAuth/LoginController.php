@@ -18,10 +18,10 @@ use URL;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'mail/PHPMailer/Exception.php';
-require 'mail/PHPMailer/PHPMailer.php';
-require 'mail/PHPMailer/SMTP.php';
-require 'mail/vendor/autoload.php';
+include_once(app_path().'/../mail/PHPMailer/Exception.php');
+include_once(app_path().'/../mail/PHPMailer/PHPMailer.php');
+include_once(app_path().'/../mail/PHPMailer/SMTP.php');
+include_once(app_path().'/../mail/vendor/autoload.php');
 
 
 class LoginController extends Controller

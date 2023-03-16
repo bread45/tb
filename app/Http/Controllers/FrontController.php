@@ -39,10 +39,10 @@ use App\States;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-        require 'mail/PHPMailer/Exception.php';
-        require 'mail/PHPMailer/PHPMailer.php';
-        require 'mail/PHPMailer/SMTP.php';
-        require 'mail/vendor/autoload.php';
+include_once(app_path().'/../mail/PHPMailer/Exception.php');
+include_once(app_path().'/../mail/PHPMailer/PHPMailer.php');
+include_once(app_path().'/../mail/PHPMailer/SMTP.php');
+include_once(app_path().'/../mail/vendor/autoload.php');
 
 class FrontController extends Controller {
 
@@ -64,7 +64,7 @@ class FrontController extends Controller {
         session()->put('book-service-url',false);
         session()->put('provider-resource-url',false);
         session()->put('resource-detail-url',false);
-        session()->put('resource-url',false);               
+        session()->put('resource-url',false);             
         $tips = cache()->remember('Tips', 60*60*24, function(){
             return Tips::All();
         });
@@ -169,32 +169,9 @@ class FrontController extends Controller {
             }
             return $v;
         });
-        $ipurl = 'http://ip-api.com/json/' . $_SERVER['REMOTE_ADDR'];
-        $ip_location_data = file_get_contents($ipurl);
-        $ip_location_data = json_decode($ip_location_data);
-//        }
-        $lon = $ip_location_data->lon;
-        $lat = $ip_location_data->lat;
 
-        $circle_radius = 3959;
-        $max_distance = 300;
-        $locations = DB::select(
-                        'SELECT * FROM
-                    (SELECT id,name, latitude, longitude, (' . $circle_radius . ' * acos(cos(radians(' . $lat . ')) * cos(radians(latitude)) *
-                    cos(radians(longitude) - radians(' . $lon . ')) +
-                    sin(radians(' . $lat . ')) * sin(radians(latitude))))
-                    AS distance
-                    FROM locations) AS distances
-                 WHERE distance < ' . $max_distance . '
-                ORDER BY distance asc limit 1;
-            ');
         $location_name = '';
-        if (!empty($locations)) {
-            foreach ($locations as $location) {
-                $location_name = $location->name;
-            }
-        } 
-        $location_name = $ip_location_data->city;
+       
         $users = cache()->remember('front_auth', 60*60*24, function(){
             return Auth::guard('front_auth')->user();
         });
@@ -222,26 +199,7 @@ class FrontController extends Controller {
         } else{
              $page = 1;
         }
-        $ipurl = 'http://ip-api.com/json/' . $_SERVER['REMOTE_ADDR'];
-        $ip_location_data = file_get_contents($ipurl);
-        $ip_location_data = json_decode($ip_location_data);
-//        }
-        $lon = $ip_location_data->lon;
-        $lat = $ip_location_data->lat;
-//        $lon = '-81.506';
-//                $lat = '30.3511';
-        $circle_radius = 3959;
-        $max_distance = 300;
-        $current_locations = DB::select(
-                        'SELECT * FROM
-                    (SELECT id,name,  latitude, longitude, (' . $circle_radius . ' * acos(cos(radians(' . $lat . ')) * cos(radians(latitude)) *
-                    cos(radians(longitude) - radians(' . $lon . ')) +
-                    sin(radians(' . $lat . ')) * sin(radians(latitude))))
-                    AS distance
-                    FROM locations) AS distances
-                 WHERE distance < ' . $max_distance . '
-                ORDER BY distance asc limit 1;
-            ');
+        
             $current_location_ids = array();
             $current_location_id = '';
             $current_location_name = '';
@@ -251,7 +209,7 @@ class FrontController extends Controller {
                     $current_location_name = $location->name; 
                 }
             }
-            $current_location_name = $ip_location_data->city;
+
          $location_name = '';
         //if (isset($request->location) && !empty($request->location)) {
            
@@ -2114,7 +2072,6 @@ if(intval($responseKeys["success"]) !== 1) {
           // Mail Notification while athelete comments the resource        
 
     $trainer_email = $request->provider_email;
-    // $trainer_email = "gowthamank@themajesticpeople.com";
     $comment_detail_mail = new PHPMailer;
     $comment_detail_mail->IsSMTP();
     $comment_detail_mail->SMTPAuth = true;

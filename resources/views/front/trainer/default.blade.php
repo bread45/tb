@@ -54,44 +54,6 @@
                     @endif
                     @endif
 
-                    <!-- Next Steps Section -->
-                    @if($nextSections)
-                    <div class="col-md-12 next_slider">
-                            
-                                <div class="top_title_but">
-                                    <h3>{{$nextSections[0]->slider_title}}</h3>
-
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="process_slide owl-carousel owl-theme">
-                                @foreach($nextSteps as $key => $nextStep)
-                                    <div class="item card_item1"> 
-                                        <div class="card_close" style="width: 100%;margin-bottom: 28px;">
-                                        <img class="close_btn" src="{{asset('front/trainer/images/x-mark.png')}}" data-id="{{$key}}">
-                                        </div>
-                                        <!-- @if(!empty($nextStep->icon))
-                                        <img src="data:image/png;base64,{{ chunk_split(base64_encode($nextStep->icon)) }}" style="height : 50px; width: auto !important;margin-bottom: 10px;">
-                                        @else
-                                        <img src="{{asset('front/images/details_default.png')}}" style="height : 50px; width: auto !important;margin-bottom: 10px;">
-                                        @endif -->
-                                        <h4>{{$nextStep->title}}</h4>
-                                        <p>{{$nextStep->content}}</p>
-                                        <div class="card_button">
-                                        @if(!empty($nextStep->button_1))
-                                        <div class="button_1"><a href="{{!empty($nextStep->button_1_link) ? $nextStep->button_1_link : '#'}}">{{$nextStep->button_1}}</a></div>
-                                        @endif
-                                        @if(!empty($nextStep->button_2))
-                                        <div class="button_2"><button data-toggle="modal" data-target="#nextModal{{$nextStep->id}}" style="border: none;padding: 6px;">{{$nextStep->button_2}}</button></div>
-                                        @endif
-                                        </div>
-                        
-                                    </div>
-                                    @endforeach
-                                </div>
-                                <hr />
-                            </div>
-                        @endif
-                    <!-- End Section -->
 
 
                     <div class="row mb-4 pb-2">
