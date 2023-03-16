@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2023 at 02:24 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Mar 16, 2023 at 02:54 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tb_source_review`
+-- Database: `trainingblock_local`
 --
 
 -- --------------------------------------------------------
@@ -45,7 +46,7 @@ CREATE TABLE `advertisements` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,7 @@ CREATE TABLE `advertisements_details` (
   `price` double(15,2) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -77,7 +78,7 @@ CREATE TABLE `athlete_help_requests` (
   `athelete_subject` varchar(250) DEFAULT NULL,
   `email_content` text DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -88,18 +89,18 @@ CREATE TABLE `athlete_help_requests` (
 CREATE TABLE `blogs` (
   `id` int(10) UNSIGNED NOT NULL,
   `blog_category_id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) NOT NULL,
-  `slug` varchar(191) DEFAULT NULL,
-  `meta_title` varchar(191) DEFAULT NULL,
-  `meta_keywords` varchar(191) DEFAULT NULL,
-  `meta_description` text DEFAULT NULL,
-  `sub_title` varchar(191) DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `image` varchar(191) DEFAULT NULL,
-  `created_by` varchar(191) DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_keywords` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_by` int(11) DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
-  `is_featured` enum('0','1') NOT NULL DEFAULT '0',
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
+  `is_featured` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `created_time` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -113,8 +114,8 @@ CREATE TABLE `blogs` (
 
 CREATE TABLE `blog_categories` (
   `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) NOT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -127,12 +128,12 @@ CREATE TABLE `blog_categories` (
 
 CREATE TABLE `categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(191) NOT NULL,
-  `slug` varchar(191) NOT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
-  `image` varchar(191) DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_popular` int(11) NOT NULL DEFAULT 0,
-  `description` text DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -145,17 +146,17 @@ CREATE TABLE `categories` (
 
 CREATE TABLE `cms_pages` (
   `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) NOT NULL,
-  `slug` varchar(191) DEFAULT NULL,
-  `sub_title_text` varchar(191) DEFAULT NULL,
-  `meta_title` varchar(191) DEFAULT NULL,
-  `meta_keywords` varchar(191) DEFAULT NULL,
-  `meta_description` text DEFAULT NULL,
-  `short_description` text DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `banner_image` varchar(191) DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title_text` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_keywords` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `short_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order_by` int(11) DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -168,12 +169,12 @@ CREATE TABLE `cms_pages` (
 
 CREATE TABLE `contact_us` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(191) NOT NULL,
-  `email` varchar(191) DEFAULT NULL,
-  `phone_number` varchar(191) DEFAULT NULL,
-  `type` varchar(191) DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_read` int(11) NOT NULL DEFAULT 0,
-  `message` text DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -188,7 +189,7 @@ CREATE TABLE `countries` (
   `id` int(11) NOT NULL,
   `country_code` varchar(2) NOT NULL DEFAULT '',
   `country_name` varchar(100) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -207,7 +208,7 @@ CREATE TABLE `coupons` (
   `status` int(2) NOT NULL COMMENT '1=>Active,2=>Inactive',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -222,7 +223,7 @@ CREATE TABLE `event_comments` (
   `name` varchar(100) NOT NULL,
   `comments` text NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -243,7 +244,7 @@ CREATE TABLE `event_count` (
   `like_count` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -268,7 +269,7 @@ CREATE TABLE `event_registration` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `event_type` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -282,7 +283,7 @@ CREATE TABLE `explore_menu_items` (
   `state` varchar(250) NOT NULL,
   `created_at` varchar(250) NOT NULL,
   `updated_at` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -297,7 +298,7 @@ CREATE TABLE `friends` (
   `accept` int(1) NOT NULL DEFAULT 0,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -307,20 +308,20 @@ CREATE TABLE `friends` (
 
 CREATE TABLE `front_users` (
   `id` int(10) UNSIGNED NOT NULL,
-  `business_name` varchar(191) DEFAULT NULL,
-  `service_location` varchar(191) DEFAULT NULL,
-  `coverage_area` varchar(191) DEFAULT NULL,
-  `first_name` varchar(191) NOT NULL,
-  `last_name` varchar(191) NOT NULL,
-  `phone_number` varchar(191) DEFAULT NULL,
-  `trainer_service_id` text DEFAULT NULL,
-  `day1` varchar(255) DEFAULT NULL COMMENT 'Monday',
-  `day2` varchar(255) DEFAULT NULL COMMENT 'Tuesday',
-  `day3` varchar(255) DEFAULT NULL COMMENT 'Wednesday',
-  `day4` varchar(255) DEFAULT NULL COMMENT 'Thursday',
-  `day5` varchar(255) DEFAULT NULL COMMENT 'Friday',
-  `day6` varchar(255) DEFAULT NULL COMMENT 'Saturday',
-  `day7` varchar(255) DEFAULT NULL COMMENT 'Sunday',
+  `business_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_location` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `coverage_area` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `first_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `trainer_service_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Monday',
+  `day2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Tuesday',
+  `day3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Wednesday',
+  `day4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Thursday',
+  `day5` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Friday',
+  `day6` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Saturday',
+  `day7` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Sunday',
   `day1_check` int(2) NOT NULL,
   `day2_check` int(2) NOT NULL,
   `day3_check` int(2) NOT NULL,
@@ -328,41 +329,41 @@ CREATE TABLE `front_users` (
   `day5_check` int(2) NOT NULL,
   `day6_check` int(2) NOT NULL,
   `day7_check` int(2) NOT NULL,
-  `address_1` varchar(255) DEFAULT NULL,
+  `address_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address1_virtual` int(2) NOT NULL,
-  `address_2` varchar(255) DEFAULT NULL,
-  `city` varchar(50) DEFAULT NULL,
-  `state` varchar(50) DEFAULT NULL,
-  `state_code` varchar(50) DEFAULT NULL,
-  `country` varchar(50) DEFAULT NULL,
-  `zip_code` varchar(50) DEFAULT NULL,
-  `map_latitude` varchar(100) NOT NULL,
-  `map_longitude` varchar(100) NOT NULL,
-  `facebook` varchar(255) DEFAULT NULL,
-  `instagram` varchar(255) DEFAULT NULL,
-  `twitter` varchar(255) DEFAULT NULL,
-  `linkedin` varchar(255) DEFAULT NULL,
-  `website` varchar(191) DEFAULT NULL,
-  `email` varchar(191) NOT NULL,
+  `address_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `city` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state_code` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `zip_code` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `map_latitude` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `map_longitude` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `instagram` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `user_role` enum('customer','trainer') DEFAULT NULL,
-  `bio` text DEFAULT NULL,
-  `headline` text DEFAULT NULL,
-  `photo` varchar(255) DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
+  `user_role` enum('customer','trainer') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `bio` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `headline` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `is_feature` int(11) NOT NULL DEFAULT 0,
   `is_sponsored` int(1) NOT NULL DEFAULT 0,
   `is_verfied` int(11) NOT NULL DEFAULT 0,
-  `password` varchar(191) NOT NULL,
-  `remember_token` varchar(191) DEFAULT NULL,
-  `spot_description` text DEFAULT NULL,
-  `affiliate_id` varchar(191) NOT NULL,
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spot_description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `affiliate_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `referred_by` bigint(20) DEFAULT NULL,
   `referral_wallet` int(11) DEFAULT NULL,
-  `stripe_customer_id` varchar(191) DEFAULT NULL,
+  `stripe_customer_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `confirmed` tinyint(1) NOT NULL DEFAULT 0,
-  `confirmation_code` varchar(255) DEFAULT NULL,
-  `google_id` varchar(250) NOT NULL,
+  `confirmation_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `google_id` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `is_subscription` int(2) NOT NULL COMMENT '0=>Waived,1=>Regular',
   `is_payment` int(2) NOT NULL COMMENT '1 => Active, 0 => Inactive',
@@ -372,6 +373,14 @@ CREATE TABLE `front_users` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `front_users`
+--
+
+INSERT INTO `front_users` (`id`, `business_name`, `service_location`, `coverage_area`, `first_name`, `last_name`, `phone_number`, `trainer_service_id`, `day1`, `day2`, `day3`, `day4`, `day5`, `day6`, `day7`, `day1_check`, `day2_check`, `day3_check`, `day4_check`, `day5_check`, `day6_check`, `day7_check`, `address_1`, `address1_virtual`, `address_2`, `city`, `state`, `state_code`, `country`, `zip_code`, `map_latitude`, `map_longitude`, `facebook`, `instagram`, `twitter`, `linkedin`, `website`, `email`, `email_verified_at`, `user_role`, `bio`, `headline`, `photo`, `status`, `is_feature`, `is_sponsored`, `is_verfied`, `password`, `remember_token`, `spot_description`, `affiliate_id`, `referred_by`, `referral_wallet`, `stripe_customer_id`, `confirmed`, `confirmation_code`, `google_id`, `created_at`, `is_subscription`, `is_payment`, `ppc_user`, `ppc_status`, `trainer_email_contact`, `updated_at`) VALUES
+(1, 'Test User', NULL, NULL, 'Test', 'User', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, NULL, 'Testuser@yopmail.com', NULL, 'trainer', NULL, NULL, NULL, 'active', 0, 0, 0, '$2y$10$UMKhdJLsAuCsQxBTwwMjLOvF3chNlWIdvZIZ6.VFwY5WXFd8CovV.', NULL, 'test-user', 'i5LOU', NULL, NULL, NULL, 1, 'KLSWb2z4iERdq6WaI1locJd3PrrNyz', '', '2023-03-15 07:21:52', 1, 1, 0, 1, 0, '2023-03-15 07:21:52'),
+(2, NULL, NULL, NULL, 'Test', 'Athlete', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, NULL, 'Testathlete@yopmail.com', NULL, 'customer', NULL, NULL, NULL, 'active', 0, 0, 0, '$2y$10$T3a1jf4KCzoWBpRctYT5DuTjbF4zdCtLUi9HDfIuK4F/FweU4aj5O', NULL, NULL, 'gmBEi', NULL, NULL, NULL, 0, NULL, '', '2023-03-15 08:09:52', 0, 0, 0, 1, 0, '2023-03-15 08:09:52');
+
 -- --------------------------------------------------------
 
 --
@@ -380,9 +389,9 @@ CREATE TABLE `front_users` (
 
 CREATE TABLE `general_settings` (
   `id` int(10) UNSIGNED NOT NULL,
-  `attr_key` varchar(191) NOT NULL,
-  `attr_value` text DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
+  `attr_key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attr_value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -400,7 +409,7 @@ CREATE TABLE `groups` (
   `user_id` int(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -414,7 +423,7 @@ CREATE TABLE `group_users` (
   `user_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -430,7 +439,7 @@ CREATE TABLE `invite_friend` (
   `token` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -443,7 +452,7 @@ CREATE TABLE `keyword_explore` (
   `keywords` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -459,7 +468,7 @@ CREATE TABLE `locations` (
   `status` varchar(10) NOT NULL DEFAULT 'active',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -476,7 +485,7 @@ CREATE TABLE `messages` (
   `conversation_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -486,7 +495,7 @@ CREATE TABLE `messages` (
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(191) NOT NULL,
+  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -498,9 +507,9 @@ CREATE TABLE `migrations` (
 
 CREATE TABLE `modules` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) NOT NULL,
-  `keyword` varchar(191) DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keyword` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -517,7 +526,7 @@ CREATE TABLE `nextsections` (
   `slider_title` varchar(250) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -538,7 +547,7 @@ CREATE TABLE `next_steps` (
   `modal_content` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -550,11 +559,11 @@ CREATE TABLE `notifications` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `from_user_id` int(10) UNSIGNED NOT NULL,
   `to_user_id` int(10) UNSIGNED NOT NULL,
-  `notification_type` varchar(191) DEFAULT NULL,
-  `title` varchar(191) DEFAULT NULL,
-  `message` text DEFAULT NULL,
-  `url` varchar(191) DEFAULT NULL,
-  `is_read` enum('0','1') NOT NULL DEFAULT '0',
+  `notification_type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_read` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -566,11 +575,11 @@ CREATE TABLE `notifications` (
 --
 
 CREATE TABLE `oauth_access_tokens` (
-  `id` varchar(100) NOT NULL,
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(20) DEFAULT NULL,
   `client_id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) DEFAULT NULL,
-  `scopes` text DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `revoked` tinyint(1) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -584,10 +593,10 @@ CREATE TABLE `oauth_access_tokens` (
 --
 
 CREATE TABLE `oauth_auth_codes` (
-  `id` varchar(100) NOT NULL,
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(20) NOT NULL,
   `client_id` int(10) UNSIGNED NOT NULL,
-  `scopes` text DEFAULT NULL,
+  `scopes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `revoked` tinyint(1) NOT NULL,
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -601,9 +610,9 @@ CREATE TABLE `oauth_auth_codes` (
 CREATE TABLE `oauth_clients` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` bigint(20) DEFAULT NULL,
-  `name` varchar(191) NOT NULL,
-  `secret` varchar(100) NOT NULL,
-  `redirect` text NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secret` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `redirect` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `personal_access_client` tinyint(1) NOT NULL,
   `password_client` tinyint(1) NOT NULL,
   `revoked` tinyint(1) NOT NULL,
@@ -631,8 +640,8 @@ CREATE TABLE `oauth_personal_access_clients` (
 --
 
 CREATE TABLE `oauth_refresh_tokens` (
-  `id` varchar(100) NOT NULL,
-  `access_token_id` varchar(100) NOT NULL,
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `revoked` tinyint(1) NOT NULL,
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -683,7 +692,7 @@ CREATE TABLE `orders` (
   `order_note` text DEFAULT NULL,
   `chat_message` int(2) NOT NULL COMMENT '1 => Enable, 2 => disable',
   `stripeToken` varchar(191) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -706,7 +715,7 @@ CREATE TABLE `order_request` (
   `comments` text NOT NULL,
   `status` int(3) NOT NULL COMMENT '1=>New,2=>Accept,3=>Decline',
   `stripeToken` varchar(191) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -715,8 +724,8 @@ CREATE TABLE `order_request` (
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(191) NOT NULL,
-  `token` varchar(191) NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -730,7 +739,7 @@ CREATE TABLE `permission_manager` (
   `id` int(10) UNSIGNED NOT NULL,
   `role_id` int(10) UNSIGNED NOT NULL,
   `route_id` int(10) UNSIGNED NOT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -750,7 +759,7 @@ CREATE TABLE `ppc_payment_history` (
   `stripe_response` text DEFAULT NULL,
   `payment_status` tinyint(1) NOT NULL COMMENT '1 => success, 0 => failed',
   `created_at` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -768,7 +777,7 @@ CREATE TABLE `ppc_user_clicks` (
   `device` text DEFAULT NULL,
   `os` text DEFAULT NULL,
   `created_at` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -782,7 +791,7 @@ CREATE TABLE `provider_locations` (
   `location_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -802,7 +811,14 @@ CREATE TABLE `provider_orders` (
   `stripeToken` varchar(100) NOT NULL,
   `status` int(2) NOT NULL,
   `cancel_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `provider_orders`
+--
+
+INSERT INTO `provider_orders` (`id`, `trainer_id`, `plan_type`, `amount`, `start_date`, `stripe_subscription_id`, `subscription_status`, `json_response`, `stripeToken`, `status`, `cancel_date`) VALUES
+(1, 1, 'monthly', 101.00, '2023-03-15', 'sub_1Mlto7ITel2JLCB6Kue6H8pc', 'active', '{\"id\":\"sub_1Mlto7ITel2JLCB6Kue6H8pc\",\"object\":\"subscription\",\"application\":null,\"application_fee_percent\":null,\"automatic_tax\":{\"enabled\":false},\"billing_cycle_anchor\":1678884715,\"billing_thresholds\":null,\"cancel_at\":null,\"cancel_at_period_end\":false,\"canceled_at\":null,\"cancellation_details\":{\"comment\":null,\"feedback\":null,\"reason\":null},\"collection_method\":\"charge_automatically\",\"created\":1678884715,\"currency\":\"usd\",\"current_period_end\":1681563115,\"current_period_start\":1678884715,\"customer\":\"cus_NWxj4TEPhHQFR0\",\"days_until_due\":null,\"default_payment_method\":null,\"default_source\":null,\"default_tax_rates\":[],\"description\":null,\"discount\":null,\"ended_at\":null,\"items\":{\"object\":\"list\",\"data\":[{\"id\":\"si_NWxjzXwKuHb5KR\",\"object\":\"subscription_item\",\"billing_thresholds\":null,\"created\":1678884716,\"metadata\":[],\"plan\":{\"id\":\"plan_NV57ZCvBRjAdwh\",\"object\":\"plan\",\"active\":true,\"aggregate_usage\":null,\"amount\":10100,\"amount_decimal\":\"10100\",\"billing_scheme\":\"per_unit\",\"created\":1678450923,\"currency\":\"usd\",\"interval\":\"month\",\"interval_count\":1,\"livemode\":false,\"metadata\":[],\"nickname\":null,\"product\":\"prod_NV57vLmd8yam4k\",\"tiers\":null,\"tiers_mode\":null,\"transform_usage\":null,\"trial_period_days\":null,\"usage_type\":\"licensed\"},\"price\":{\"id\":\"plan_NV57ZCvBRjAdwh\",\"object\":\"price\",\"active\":true,\"billing_scheme\":\"per_unit\",\"created\":1678450923,\"currency\":\"usd\",\"custom_unit_amount\":null,\"livemode\":false,\"lookup_key\":null,\"metadata\":[],\"nickname\":null,\"product\":\"prod_NV57vLmd8yam4k\",\"recurring\":{\"aggregate_usage\":null,\"interval\":\"month\",\"interval_count\":1,\"trial_period_days\":null,\"usage_type\":\"licensed\"},\"tax_behavior\":\"unspecified\",\"tiers_mode\":null,\"transform_quantity\":null,\"type\":\"recurring\",\"unit_amount\":10100,\"unit_amount_decimal\":\"10100\"},\"quantity\":1,\"subscription\":\"sub_1Mlto7ITel2JLCB6Kue6H8pc\",\"tax_rates\":[]}],\"has_more\":false,\"total_count\":1,\"url\":\"\\/v1\\/subscription_items?subscription=sub_1Mlto7ITel2JLCB6Kue6H8pc\"},\"latest_invoice\":\"in_1Mlto7ITel2JLCB6w4l96nxc\",\"livemode\":false,\"metadata\":[],\"next_pending_invoice_item_invoice\":null,\"on_behalf_of\":null,\"pause_collection\":null,\"payment_settings\":{\"payment_method_options\":null,\"payment_method_types\":null,\"save_default_payment_method\":\"off\"},\"pending_invoice_item_interval\":null,\"pending_setup_intent\":null,\"pending_update\":null,\"plan\":{\"id\":\"plan_NV57ZCvBRjAdwh\",\"object\":\"plan\",\"active\":true,\"aggregate_usage\":null,\"amount\":10100,\"amount_decimal\":\"10100\",\"billing_scheme\":\"per_unit\",\"created\":1678450923,\"currency\":\"usd\",\"interval\":\"month\",\"interval_count\":1,\"livemode\":false,\"metadata\":[],\"nickname\":null,\"product\":\"prod_NV57vLmd8yam4k\",\"tiers\":null,\"tiers_mode\":null,\"transform_usage\":null,\"trial_period_days\":null,\"usage_type\":\"licensed\"},\"quantity\":1,\"schedule\":null,\"start_date\":1678884715,\"status\":\"active\",\"tax_percent\":null,\"test_clock\":null,\"transfer_data\":null,\"trial_end\":null,\"trial_settings\":{\"end_behavior\":{\"missing_payment_method\":\"create_invoice\"}},\"trial_start\":null}', 'tok_1Mlto4ITel2JLCB6R5F1XXNj', 0, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -820,7 +836,7 @@ CREATE TABLE `provider_scheduling` (
   `day5` varchar(255) NOT NULL,
   `day6` varchar(255) NOT NULL,
   `day7` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -835,7 +851,7 @@ CREATE TABLE `provider_scheduling_date` (
   `date` varchar(100) NOT NULL,
   `time` varchar(255) NOT NULL,
   `created_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -854,7 +870,7 @@ CREATE TABLE `provider_scheduling_service` (
   `day5` varchar(255) NOT NULL,
   `day6` varchar(255) NOT NULL,
   `day7` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -870,7 +886,7 @@ CREATE TABLE `provider_scheduling_service_date` (
   `date` varchar(100) NOT NULL,
   `time` varchar(255) NOT NULL,
   `created_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -888,7 +904,7 @@ CREATE TABLE `provider_scheduling_temp` (
   `day5` varchar(255) NOT NULL,
   `day6` varchar(255) NOT NULL,
   `day7` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -903,7 +919,7 @@ CREATE TABLE `provider_service_book` (
   `days` int(11) NOT NULL,
   `date` varchar(100) NOT NULL,
   `time` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -921,7 +937,14 @@ CREATE TABLE `ratings` (
   `description` text DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ratings`
+--
+
+INSERT INTO `ratings` (`id`, `trainer_id`, `user_id`, `order_id`, `title`, `rating`, `description`, `created_at`, `updated_at`) VALUES
+(1, 1, 2, NULL, 'Userful Training', 5, 'Userful Training Session', '2023-03-15 08:10:35', '2023-03-15 13:40:35');
 
 -- --------------------------------------------------------
 
@@ -936,7 +959,7 @@ CREATE TABLE `recommended_providers` (
   `role` varchar(100) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -952,7 +975,7 @@ CREATE TABLE `referral_bonus` (
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -969,6 +992,7 @@ CREATE TABLE `resource` (
   `category` varchar(100) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `format` varchar(100) DEFAULT NULL,
+  `keyword` text NOT NULL,
   `type` varchar(50) NOT NULL,
   `format_name` varchar(100) DEFAULT NULL,
   `image_name` varchar(200) NOT NULL,
@@ -978,7 +1002,14 @@ CREATE TABLE `resource` (
   `comment_count` int(11) NOT NULL,
   `status` int(3) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `resource`
+--
+
+INSERT INTO `resource` (`id`, `trainer_id`, `name`, `title`, `subtitle`, `category`, `description`, `format`, `keyword`, `type`, `format_name`, `image_name`, `big_image_name`, `tags`, `like_count`, `comment_count`, `status`, `created_at`) VALUES
+(1, 1, 'Test User', 'Test', 'Test_Sub_G', 'Biomechanical and Fitness Testing', 'Test', 'Article', 'Test', '', NULL, 'resource_image1678885633.jpg', '1678885778.blog-35.jpg', NULL, 0, 0, 1, '2023-03-15 13:09:38');
 
 -- --------------------------------------------------------
 
@@ -992,7 +1023,7 @@ CREATE TABLE `resource_category` (
   `name` varchar(100) DEFAULT NULL,
   `status` int(2) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1007,7 +1038,7 @@ CREATE TABLE `resource_comments` (
   `name` varchar(100) NOT NULL,
   `comments` text NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1027,7 +1058,7 @@ CREATE TABLE `resource_count` (
   `comments` text DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1037,8 +1068,8 @@ CREATE TABLE `resource_count` (
 
 CREATE TABLE `roles` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) NOT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1058,7 +1089,31 @@ CREATE TABLE `services` (
   `home_color` varchar(150) NOT NULL,
   `status` varchar(50) NOT NULL DEFAULT 'active',
   `weight` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `name`, `icon`, `white_icon`, `home_icon`, `home_color`, `status`, `weight`) VALUES
+(1, 'Chiropractic Care', 'Chiropractic-pink.svg', 'Chiropractic-white.svg', 'chiropractic-icon.png', '#fef1e8', 'active', 7),
+(2, 'Coaching - Running', 'runner_pink.svg', 'running-white.svg', 'catagory-icon-2.png', '#fee', 'active', 3),
+(3, 'Coaching - Other', 'Coaching-pink.svg', 'Coaching-white.svg', 'catagory-icon-5.png', '#f9f5f4', 'active', 14),
+(4, 'Gym/Studio', 'gym-pink.svg', 'gym-white.svg', 'catagory-icon-5.png', '#f9f5f4', 'inactive', 18),
+(5, 'Medical - Other', 'medical-pink.svg', 'medical-white.svg', 'medical.png', '#e9fdfb', 'active', 13),
+(6, 'Meal Services', 'possibly_meal_services_pink.svg', 'meal-services-white.svg', '', '', 'inactive', 17),
+(7, 'Massage Therapy', 'Massage-pink.svg', 'Massage-white.svg', 'catagory-icon-6.png', '#fdebf9', 'active', 5),
+(8, 'Nutrition Services', 'nutrition-services-pink.svg', 'nutrition-services-white.svg', 'catagory-icon-4.png', '#fff4e8', 'active', 2),
+(9, 'Other Training Services', 'other-athletic-services-pink.svg', 'other-athletic-services-white.svg', 'other-training.png', '#e7f8f5', 'active', 15),
+(10, 'Personal Training', 'Personal_training_pink.svg', 'personal-training-white.svg', '', '', 'inactive', 16),
+(11, 'Physical Therapy', 'physical-therapy-pink.svg', 'physical-therapy-white.svg', 'catagory-icon-3.png', '#f3efff', 'active', 1),
+(12, 'Recovery Tools', 'recovery_tools_pink.svg', 'recovery-tools-white.svg', 'Recovery-tools.png', '#f6f9ee', 'active', 8),
+(13, 'Strength Training', 'StrengthTraining.png', 'StrengthTraining_white.png', 'strength-training.png', '#ffe9f9', 'active', 4),
+(14, 'Groups/Clubs', 'GroupsClubs.png', 'GroupsClubs_white.png', 'groups-clubs.png', '#f5f5fd', 'active', 12),
+(15, 'Biomechanical and Fitness Testing', 'Biomechanical.png', 'Biomechanical_white.png', 'biomechanical-icon.png', '#f2f7fd', 'active', 9),
+(16, 'Psychology', 'Personal_training_pink.svg', 'personal-training-white.svg', 'catagory-icon-1.png', '#e8f8f7', 'active', 6),
+(17, 'Coaching - Triathlon', 'Coaching-pink.svg', 'Coaching-white.svg', 'triathlon-icon.png', '#f8fbe8', 'active', 10),
+(18, 'Coaching - Cycling', 'runner_pink.svg', 'running-white.svg', 'cyclihng.png', '#f8f5fe', 'active', 11);
 
 -- --------------------------------------------------------
 
@@ -1071,7 +1126,7 @@ CREATE TABLE `states` (
   `name` varchar(30) NOT NULL,
   `postal_code` varchar(100) NOT NULL,
   `country_code` varchar(30) NOT NULL DEFAULT 'US'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1089,7 +1144,7 @@ CREATE TABLE `stripe_accounts` (
   `stripe_user_id` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1101,7 +1156,7 @@ CREATE TABLE `subscribe` (
   `id` int(11) NOT NULL,
   `email` varchar(200) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1111,12 +1166,12 @@ CREATE TABLE `subscribe` (
 
 CREATE TABLE `subscriptionplan` (
   `id` int(10) UNSIGNED NOT NULL,
-  `subcription_plan` varchar(191) NOT NULL,
-  `price` varchar(30) DEFAULT NULL,
-  `product_id` varchar(191) NOT NULL,
-  `plan_id` varchar(191) NOT NULL,
+  `subcription_plan` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `plan_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `free_trial_months` int(4) NOT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1137,13 +1192,13 @@ INSERT INTO `subscriptionplan` (`id`, `subcription_plan`, `price`, `product_id`,
 
 CREATE TABLE `testimonials` (
   `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) DEFAULT NULL,
-  `user_name` varchar(255) DEFAULT NULL,
-  `position` varchar(255) DEFAULT NULL,
-  `user_image` text NOT NULL,
-  `description` text DEFAULT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_image` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `rating` int(11) NOT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'inactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1161,7 +1216,7 @@ CREATE TABLE `tips` (
   `image` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1181,7 +1236,7 @@ CREATE TABLE `trainer_email_requests` (
   `athelete_subject` varchar(250) DEFAULT NULL,
   `email_content` text DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1218,7 +1273,7 @@ CREATE TABLE `trainer_events` (
   `event_start_datetime` datetime DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1235,7 +1290,7 @@ CREATE TABLE `trainer_photo` (
   `is_video` int(11) NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1252,7 +1307,15 @@ CREATE TABLE `trainer_resource_photo` (
   `is_video` int(11) NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `trainer_resource_photo`
+--
+
+INSERT INTO `trainer_resource_photo` (`id`, `trainer_id`, `image`, `position`, `is_featured`, `is_video`, `created_at`, `updated_at`) VALUES
+(1, 1, 'resource_image1678885430.jpg', 11111, 0, 0, '2023-03-15 13:03:50', '2023-03-15 13:03:50'),
+(2, 1, 'resource_image1678885633.jpg', 11111, 0, 0, '2023-03-15 13:07:13', '2023-03-15 13:07:13');
 
 -- --------------------------------------------------------
 
@@ -1264,32 +1327,32 @@ CREATE TABLE `trainer_services` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `service_id` bigint(20) NOT NULL,
   `trainer_id` int(11) NOT NULL,
-  `name` varchar(191) DEFAULT NULL,
-  `is_featured` varchar(255) NOT NULL,
-  `is_recurring` varchar(255) DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_featured` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_recurring` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `max_bookings` int(11) DEFAULT NULL,
-  `price` varchar(191) DEFAULT NULL,
-  `price_weekly` varchar(191) DEFAULT NULL,
-  `price_monthly` varchar(191) DEFAULT NULL,
-  `format` varchar(191) NOT NULL,
-  `message` text DEFAULT NULL,
-  `image` text DEFAULT NULL,
+  `price` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price_weekly` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price_monthly` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `format` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
-  `fromDay` varchar(100) DEFAULT NULL COMMENT 'Hour of Operation (From Date)',
-  `toDay` varchar(100) DEFAULT NULL COMMENT 'Hour of Operation (To Date)',
-  `fromTime` varchar(100) DEFAULT NULL COMMENT 'Hour of Operation (From Time)',
-  `toTime` varchar(100) DEFAULT NULL COMMENT 'Hour of Operation (To Time)',
+  `fromDay` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Hour of Operation (From Date)',
+  `toDay` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Hour of Operation (To Date)',
+  `fromTime` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Hour of Operation (From Time)',
+  `toTime` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Hour of Operation (To Time)',
   `location_id` int(11) DEFAULT NULL,
-  `product_id` varchar(191) DEFAULT NULL,
-  `weekly_plan_id` varchar(191) DEFAULT NULL,
-  `monthly_plan_id` varchar(191) DEFAULT NULL,
-  `yearly_plan_id` varchar(191) DEFAULT NULL,
-  `duration` varchar(50) DEFAULT NULL,
-  `duration_mins` varchar(55) NOT NULL,
-  `buffer_time` varchar(50) DEFAULT NULL,
-  `promo_code` varchar(50) DEFAULT NULL,
+  `product_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `weekly_plan_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `monthly_plan_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `yearly_plan_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `duration` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `duration_mins` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buffer_time` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `promo_code` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `book_type` int(2) DEFAULT NULL COMMENT '1=>Automatic Booking,2=>Request to Book',
-  `desc` text DEFAULT NULL,
+  `desc` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1303,18 +1366,18 @@ CREATE TABLE `trainer_services` (
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `role_id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) NOT NULL,
-  `username` varchar(191) NOT NULL,
-  `email` varchar(191) NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lockout_time` int(11) NOT NULL DEFAULT 0,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `phone_number` varchar(191) NOT NULL,
-  `password` varchar(191) NOT NULL,
-  `address` text DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
-  `image` varchar(191) DEFAULT NULL,
-  `login_ip` varchar(191) DEFAULT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `phone_number` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `login_ip` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1324,7 +1387,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `username`, `email`, `lockout_time`, `email_verified_at`, `phone_number`, `password`, `address`, `status`, `image`, `login_ip`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 1, 'Training', 'admin', 'trainingblockusa@gmail.com', 1, NULL, '(407) 864-2606', '$2y$10$99R3k7dB5cBf.GwMLM21xOd0u0qPwiGWfZt8HZph2Roul5kjoy8YO', '12620 Beach Blvd. Suite #3,\r\nJacksonville, Florida,\r\nUnited States, 32246', 'active', '1581405783.jpg', NULL, 'PCG7TiCEp9712gtyQKgzyTwVDKuWCq78GjTag02wHY7JCXwAFh2CaX507G9A', NULL, '2020-04-17 20:04:07');
+(2, 1, 'Training', 'admin', 'trainingblockusa@gmail.com', 1, NULL, '(407) 864-2606', '$2y$10$99R3k7dB5cBf.GwMLM21xOd0u0qPwiGWfZt8HZph2Roul5kjoy8YO', '12620 Beach Blvd. Suite #3,\r\nJacksonville, Florida,\r\nUnited States, 32246', 'active', '1581405783.jpg', NULL, 'J1GVWGMsTsof8OEn0YSZSZW4xexvMuDiu0aoH8usWuxL8mQlBQR7XtioeEAw', NULL, '2020-04-17 20:04:07');
 
 -- --------------------------------------------------------
 
@@ -1339,7 +1402,7 @@ CREATE TABLE `us_cities` (
   `city_county` varchar(100) DEFAULT NULL,
   `city_latitude` varchar(100) DEFAULT NULL,
   `city_longitude` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -1852,7 +1915,7 @@ ALTER TABLE `friends`
 -- AUTO_INCREMENT for table `front_users`
 --
 ALTER TABLE `front_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `general_settings`
@@ -1978,7 +2041,7 @@ ALTER TABLE `provider_locations`
 -- AUTO_INCREMENT for table `provider_orders`
 --
 ALTER TABLE `provider_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `provider_scheduling`
@@ -2020,7 +2083,7 @@ ALTER TABLE `provider_service_book`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `recommended_providers`
@@ -2032,7 +2095,7 @@ ALTER TABLE `recommended_providers`
 -- AUTO_INCREMENT for table `resource`
 --
 ALTER TABLE `resource`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `resource_category`
@@ -2062,7 +2125,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `states`
@@ -2122,7 +2185,7 @@ ALTER TABLE `trainer_photo`
 -- AUTO_INCREMENT for table `trainer_resource_photo`
 --
 ALTER TABLE `trainer_resource_photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `trainer_services`
