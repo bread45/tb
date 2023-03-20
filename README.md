@@ -23,7 +23,7 @@ Install composer
 Download and install node.js using this link https://nodejs.org/en/download/
 
 
-## running the items locally
+## run site locally
 
 - Command for install laravel Packages
 
