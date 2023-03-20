@@ -2,27 +2,25 @@
 TrainingBlockUSA
 
 ## required
-- Training block Application need PHP Version >= 7.3
+Training block Application need PHP Version >= 7.3
 
-- Install Xampp Server with (PHP Version >= 7.3)
+Install Xampp Server with (PHP Version >= 7.3)
 
-Download here: https://www.apachefriends.org/download.html. Ensure the version is 7.3 or 7.4
+- Download here: https://www.apachefriends.org/download.html. Ensure the version is 7.3 or 7.4
 
-Xampp will install the correct php version on your system as well.
+- Xampp will install the correct php version on your system as well.
 
-Then after installation open the app and turn on mysql and apache servers. For more details see (#SQLSTATE[HY000] section in #Troubleshoot below)
+- Then after installation open the app and turn on mysql and apache servers. For more details see (#SQLSTATE[HY000] section in #Troubleshoot below)
 
-- Install composer
+Install composer
 
-brew install composer
+- `brew install composer`
 
-(or check the docs, install application based on your system config.)
+- (or check the docs, install application based on your system config.)
 
-https://getcomposer.org/download/
+- https://getcomposer.org/download/
 
-- Download and install node.js using this link
-
-https://nodejs.org/en/download/
+Download and install node.js using this link https://nodejs.org/en/download/
 
 
 ## running the items locally
