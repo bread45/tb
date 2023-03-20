@@ -4,7 +4,7 @@ TrainingBlockUSA
 ## required
 - Training block Application need PHP Version >= 7.3
 
-#Install Xampp Server with (PHP Version >= 7.3)
+- Install Xampp Server with (PHP Version >= 7.3)
 
 Download here: https://www.apachefriends.org/download.html. Ensure the version is 7.3 or 7.4
 
@@ -12,7 +12,7 @@ Xampp will install the correct php version on your system as well.
 
 Then after installation open the app and turn on mysql and apache servers. For more details see (#SQLSTATE[HY000] section in #Troubleshoot below)
 
-#Install composer
+- Install composer
 
 brew install composer
 
@@ -20,17 +20,20 @@ brew install composer
 
 https://getcomposer.org/download/
 
-#Command for install laravel Packages
-
-composer install
-
-#Download and install node.js using this link
+- Download and install node.js using this link
 
 https://nodejs.org/en/download/
 
+
+## running the items locally
+
+- Command for install laravel Packages
+
+`composer install`
+
 #Database Import
 
-import 'trainingblock.sql' file to your Phpmyadmin (http://localhost/phpmyadmin)
+import `trainingblock.sql` file to your Phpmyadmin (http://localhost/phpmyadmin)
 
 #Update app credentials
 
@@ -38,7 +41,7 @@ change DB name (DB_DATABASE) in ".env" file
 
 #Command for install node modules
 
-npm install
+`npm install`
 
 #Command for create unique app key
 
