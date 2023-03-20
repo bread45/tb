@@ -25,7 +25,7 @@ Download and install node.js using this link https://nodejs.org/en/download/
 
 ## run site locally
 
-- Command for install laravel Packages
+#Command for install laravel Packages
 
 `composer install`
 
