@@ -9,7 +9,7 @@ Download here: https://www.apachefriends.org/download.html. Ensure the version i
 
 Xampp will install the correct php version on your system as well.
 
-Then after installation open the app and turn on mysql and apache servers. For more details see #70
+Then after installation open the app and turn on mysql and apache servers. For more details see (#SQLSTATE[HY000] section in #Troubleshoot below)
 
 #Install composer
 
