@@ -35,7 +35,7 @@ import `trainingblock.sql` file to your Phpmyadmin (http://localhost/phpmyadmin)
 
 #Update app credentials
 
-change DB name (DB_DATABASE) in ".env" file
+change DB name (`DB_DATABASE`) in `.env` file
 
 #Command for install node modules
 
@@ -43,15 +43,15 @@ change DB name (DB_DATABASE) in ".env" file
 
 #Command for create unique app key
 
-php artisan key:generate
+`php artisan key:generate`
 
 #Command for clear cache
 
-php artisan optimize:clear
+`php artisan optimize:clear`
 
 #Command for run App
 
-php artisan serve
+`php artisan serve`
 
 ## Troubleshoot
 
