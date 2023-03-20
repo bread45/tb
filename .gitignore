@@ -2,4 +2,5 @@
 /storage/*.key
 /vendor
 /storage/logs
+/bootstrap/cache
 
