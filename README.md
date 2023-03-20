@@ -9,6 +9,8 @@ Download here: https://www.apachefriends.org/download.html. Ensure the version i
 
 Xampp will install the correct php version on your system as well.
 
+Then after installation open the app and turn on mysql and apache servers. For more details see #70
+
 #Install composer
 
 brew install composer
@@ -61,3 +63,19 @@ export PATH=${XAMPP_HOME}/bin:${PATH}
 export PATH
 ```
 
+#The /Users/stevenli/Documents/Github/steven4354/TrainingBlock/bootstrap/cache directory must be present and writable.
+
+mkdir that folder
+
+#SQLSTATE[HY000] [2002] No such file or directory (SQL: SET FOREIGN_KEY_CHECKS=1;)
+
+xampp app needs to be turned on
+
+open xampp here:
+https://capture.dropbox.com/N3QhSunSLdydoGMN
+
+turn on apache and database
+https://capture.dropbox.com/usaVOFPhK5bYD0S6
+
+rerun
+`php artisan serve`
