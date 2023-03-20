@@ -5,6 +5,10 @@ TrainingBlockUSA
 
 #Install Xampp Server with (PHP Version >= 7.3)
 
+Download here: https://www.apachefriends.org/download.html. Ensure the version is 7.3 or 7.4
+
+Xampp will install the correct php version on your system as well.
+
 #Install composer
 
 brew install composer
@@ -44,3 +48,16 @@ php artisan optimize:clear
 #Command for run App
 
 php artisan serve
+
+## Troubleshoot
+
+#Xampp or php command not found
+
+add to your bash profile or .zshrc
+
+```
+export XAMPP_HOME=/Applications/XAMPP
+export PATH=${XAMPP_HOME}/bin:${PATH}
+export PATH
+```
+
