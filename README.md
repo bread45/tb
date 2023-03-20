@@ -1,7 +1,8 @@
 # TrainingBlock
 TrainingBlockUSA
 
-#Training block Application need PHP Version >= 7.3
+## required
+- Training block Application need PHP Version >= 7.3
 
 #Install Xampp Server with (PHP Version >= 7.3)
 
